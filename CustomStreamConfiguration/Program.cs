@@ -8,7 +8,7 @@ namespace CustomStreamConfiguration
         internal static void Main()
         {
             var configRoot = new ConfigurationBuilder()
-                .AddCsv("some.csv")
+                .AddCsv("config/settings.csv")
                 .Build();
 
             Console.WriteLine($"{configRoot["env"]}|{configRoot["host"]}|{configRoot["port"]}");

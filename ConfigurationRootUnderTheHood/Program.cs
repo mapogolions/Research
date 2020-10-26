@@ -21,9 +21,9 @@ namespace ConfigurationRootUnderTheHood
             var configProvider = new MemoryConfigurationProvider(new MemoryConfigurationSource
             {
                 InitialData = new List<KeyValuePair<string, string>>
-                    {
-                        new KeyValuePair<string, string>("env", "Production")
-                    }
+                {
+                    new KeyValuePair<string, string>("env", "Production")
+                }
             });
             var configProviders = new List<IConfigurationProvider> 
             {

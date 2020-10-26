@@ -1,0 +1,3 @@
+﻿env:Production
+host:localhost
+port:8000
