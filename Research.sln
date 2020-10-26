@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationRootUnderTheHo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomStreamConfiguration", "CustomStreamConfiguration\CustomStreamConfiguration.csproj", "{7222D471-D71C-4709-8797-4518FC8A685B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserSecretConfiguration", "UserSecretConfiguration\UserSecretConfiguration.csproj", "{0BFA2887-E043-4098-9924-12F6BBAE0444}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{7222D471-D71C-4709-8797-4518FC8A685B}.Release|x64.Build.0 = Release|Any CPU
 		{7222D471-D71C-4709-8797-4518FC8A685B}.Release|x86.ActiveCfg = Release|Any CPU
 		{7222D471-D71C-4709-8797-4518FC8A685B}.Release|x86.Build.0 = Release|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Debug|x64.Build.0 = Debug|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Debug|x86.Build.0 = Debug|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Release|x64.ActiveCfg = Release|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Release|x64.Build.0 = Release|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Release|x86.ActiveCfg = Release|Any CPU
+		{0BFA2887-E043-4098-9924-12F6BBAE0444}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
