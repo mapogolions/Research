@@ -4,7 +4,7 @@ using System.IO;
 
 namespace CustomStreamConfiguration
 {
-    public static class CsvConfigurationBuilderExtentions
+    public static class CsvConfigurationBuilderExtensions
     {
         public static IConfigurationBuilder AddCsv(this IConfigurationBuilder configurationBuilder,
             string fileName)
