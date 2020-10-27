@@ -11,7 +11,8 @@ namespace CustomStreamConfiguration
                 .AddCsv("config/settings.csv")
                 .Build();
 
-            Console.WriteLine($"{configRoot["env"]}|{configRoot["host"]}|{configRoot["port"]}");
+            var devConfigSection = configRoot.GetSection("development");
+            Console.WriteLine($"{configRoot["env"]}|{devConfigSection["host"]}|{devConfigSection["port"]}");
         }
     }
 }

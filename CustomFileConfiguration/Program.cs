@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
-using System.IO;
 
 namespace CustomFileConfiguration
 {
@@ -16,7 +15,8 @@ namespace CustomFileConfiguration
                 })
                 .Build();
 
-            Console.WriteLine($"{configRoot["env"]}|{configRoot["host"]}|{configRoot["port"]}");
+            var devConfigSection = configRoot.GetSection("Development");
+            Console.WriteLine($"{configRoot["env"]}|{devConfigSection["host"]}|{devConfigSection["port"]}");
         }
     }
 }
