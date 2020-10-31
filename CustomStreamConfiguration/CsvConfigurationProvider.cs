@@ -14,7 +14,7 @@ namespace CustomStreamConfiguration
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
-                var chunks = line.Split(ConfigurationPath.KeyDelimiter, StringSplitOptions.RemoveEmptyEntries);
+                var chunks = line.Split(',', StringSplitOptions.RemoveEmptyEntries);
                 if (chunks.Length != 2)
                     throw new InvalidOperationException("Invalid csv format");
                 Data.Add(chunks[0].Trim(), chunks[1].Trim());

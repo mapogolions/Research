@@ -1,3 +1,3 @@
-﻿env:Development
-host:locahost
-port:8000
+﻿env,Development
+Development:Host,locahost
+Development:port,8000
