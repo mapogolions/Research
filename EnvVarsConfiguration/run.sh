@@ -1,4 +1,4 @@
 export TempEnv=Development
-export TempDevelopment__Port=8000
-export TempDevelopment__Host=localhost
+export Temp${TempEnv}__Port=8000
+export Temp${TempEnv}__Host=localhost
 dotnet run ./
