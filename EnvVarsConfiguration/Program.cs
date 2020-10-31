@@ -10,8 +10,9 @@ namespace EnvVarsConfiguration
             var configRoot = new ConfigurationBuilder()
                 .AddEnvironmentVariables("Temp")
                 .Build();
-            var devConfig = configRoot.GetSection("development");
-            Console.WriteLine($"{configRoot["env"]}|{devConfig["host"]}|{devConfig["port"]}");
+            var env = configRoot["env"];
+            var envConfig = configRoot.GetSection(env);
+            Console.WriteLine($"{env}|{envConfig["host"]}|{envConfig["port"]}");
         }
     }
 }
