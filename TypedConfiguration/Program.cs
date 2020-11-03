@@ -13,7 +13,8 @@ namespace TypedConfiguration
                 {
                     new KeyValuePair<string, string>("Env", "Development"),
                     new KeyValuePair<string, string>("Development:Host", "127.0.0.1"),
-                    new KeyValuePair<string, string>("Development:Port", "8000")
+                    new KeyValuePair<string, string>("Development:Port", "8000"),
+                    new KeyValuePair<string, string>("Flag", "true")
                 })
                 .Build();
             var devConfigSection = configRoot.GetSection("development");
@@ -21,7 +22,8 @@ namespace TypedConfiguration
             {
                 Env = configRoot.GetValue("env", "default env"),
                 Host = devConfigSection.GetValue("host", "localhost"),
-                Port = devConfigSection.GetValue("port", 25000)
+                Port = devConfigSection.GetValue("port", 25000),
+                Flag = configRoot.GetValue("flag", false)
             };
             Console.WriteLine(config);
         }
