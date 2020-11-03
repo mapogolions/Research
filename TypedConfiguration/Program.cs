@@ -1,12 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
 namespace TypedConfiguration
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        internal static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var configRoot = new ConfigurationBuilder()
+                .AddInMemoryCollection(new List<KeyValuePair<string, string>>
+                {
+                    new KeyValuePair<string, string>("Env", "Development"),
+                    new KeyValuePair<string, string>("Development:Host", "127.0.0.1"),
+                    new KeyValuePair<string, string>("Development:Port", "8000")
+                })
+                .Build();
+            var devConfigSection = configRoot.GetSection("development");
+            var config = new Config
+            {
+                Env = configRoot.GetValue("env", "default env"),
+                Host = devConfigSection.GetValue("host", "localhost"),
+                Port = devConfigSection.GetValue("port", 25000)
+            };
+            Console.WriteLine(config);
         }
     }
 }
