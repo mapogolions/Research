@@ -11,21 +11,25 @@ namespace TypedConfiguration
             var configRoot = new ConfigurationBuilder()
                 .AddInMemoryCollection(new List<KeyValuePair<string, string>>
                 {
-                    new KeyValuePair<string, string>("Env", "Development"),
                     new KeyValuePair<string, string>("Development:Host", "127.0.0.1"),
                     new KeyValuePair<string, string>("Development:Port", "8000"),
-                    new KeyValuePair<string, string>("Flag", "true")
+                    new KeyValuePair<string, string>("Development:Flags:ReloadOnChange", "true"),
+                    new KeyValuePair<string, string>("Development:Flags:ShutdownGracefully", "true")
                 })
                 .Build();
             var devConfigSection = configRoot.GetSection("development");
             var config = new Config
             {
-                Env = configRoot.GetValue("env", "default env"),
                 Host = devConfigSection.GetValue("host", "localhost"),
                 Port = devConfigSection.GetValue("port", 25000),
-                Flag = configRoot.GetValue("flag", false)
             };
             Console.WriteLine(config);
+            Console.WriteLine(devConfigSection.Get<Config>());
+            var flags = devConfigSection.GetSection("Flags").Get<IDictionary<string, bool>>();
+            foreach (var flag in flags)
+            {
+                Console.WriteLine($"{flag.Key} -> {flag.Value}");
+            }
         }
     }
 }
