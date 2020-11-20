@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace ConfigureOptions
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        internal static void Main(string[] args)
         {
             var configurations = new List<IConfigureOptions<CacheEntryOptions>>
             {
@@ -43,7 +43,7 @@ namespace ConfigureOptions
             Console.WriteLine(neverRemoveCacheEntryOptions);
             var oneDayExpirationCacheEntryOptions = cacheEntryOptionsManager.Get("OneDayExpiration");
             Console.WriteLine(oneDayExpirationCacheEntryOptions);
-            var defaultCacheEntryOptions = cacheEntryOptionsManager.Get(string.Empty);
+            var defaultCacheEntryOptions = cacheEntryOptionsManager.Value; // .Get(string.Empty)
             Console.WriteLine(defaultCacheEntryOptions);
         }
     }
