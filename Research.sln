@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypedConfiguration", "Typed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigureOptions", "ConfigureOptions\ConfigureOptions.csproj", "{B8909B1F-965A-474B-9572-0AF9170DB377}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeChangeTokenPrimitive", "CompositeChangeTokenPrimitive\CompositeChangeTokenPrimitive.csproj", "{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,18 @@ Global
 		{B8909B1F-965A-474B-9572-0AF9170DB377}.Release|x64.Build.0 = Release|Any CPU
 		{B8909B1F-965A-474B-9572-0AF9170DB377}.Release|x86.ActiveCfg = Release|Any CPU
 		{B8909B1F-965A-474B-9572-0AF9170DB377}.Release|x86.Build.0 = Release|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Debug|x64.Build.0 = Debug|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Debug|x86.Build.0 = Debug|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Release|x64.ActiveCfg = Release|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Release|x64.Build.0 = Release|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Release|x86.ActiveCfg = Release|Any CPU
+		{DEDA492D-D970-4BC2-8CBF-1F9984995BDF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
