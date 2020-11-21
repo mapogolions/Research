@@ -5,16 +5,16 @@ namespace CompositeChangeTokenPrimitive
 {
     public class SpyChangeToken : IChangeToken
     {
-        private readonly  IChangeToken _origin;
+        private readonly  IChangeToken _changeToken;
 
-        public SpyChangeToken(IChangeToken origin) => _origin = origin;
+        public SpyChangeToken(IChangeToken changeToken) => _changeToken = changeToken;
 
-        public bool HasChanged => _origin.HasChanged;
+        public bool HasChanged => _changeToken.HasChanged;
 
-        public bool ActiveChangeCallbacks => _origin.ActiveChangeCallbacks;
+        public bool ActiveChangeCallbacks => _changeToken.ActiveChangeCallbacks;
 
         public IDisposable RegisterChangeCallback(Action<object> callback, object state) =>
-            new LogDisposable(_origin.RegisterChangeCallback(callback, state));
+            new LogDisposable(_changeToken.RegisterChangeCallback(callback, state));
 
         private class LogDisposable : IDisposable
         {
